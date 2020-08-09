@@ -4,7 +4,7 @@
 - If the triangle A's width is 3, and height is 7, what is the area of the triangle A?
 - If Kim's salary is 1.11 million won per month, what is his annual salary? (Condition : subtract 10% for a tax)
 - 100 seconds >> 00min 00sec?
-1. Answers
+2. Answers
 - 
 
 ```c
