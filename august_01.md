@@ -26,7 +26,7 @@ void main{
     printf("============ Integer ============");printf("\n");
     printf("%d" , 3 + 3);	printf("\n");
 
-	// # print float type  %f
+	// # print float %f
     printf("============ Float ============");printf("\n");
     printf("%f" , 3.3 + 5.3);	printf("\n");
 
@@ -36,7 +36,7 @@ void main{
     printf("%c , 'a'); printf("\n");
     printf("a");printf("\n");
 
-	// # 문자열 출력 %s
+	// # print strings %s
 	// "" When you print out strings, you can use ""
     printf("============ String ============");printf("\n");
     printf("%s" , "abcde"); printf("\n");
