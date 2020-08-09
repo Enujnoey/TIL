@@ -33,7 +33,7 @@ void main{
 	// # print one character %c
 	// when you print out a character, you should used with '' not ""
     printf("============ Character ============");printf("\n");
-    printf("%c , 'a'); printf("\n");
+    printf("%c" , 'a'); printf("\n");
     printf("a");printf("\n");
 
 	// # print strings %s
