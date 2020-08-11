@@ -4,6 +4,9 @@
 - Calulate the area of a rectangle with a width of 7, and a height of 3.
 - Calculate the average score of three subjects (Subject 1 : 20, Subject 2 : 43, Subject 3 : 71)
 - Divide $1,868 into each bills ($100, $50, $20, $10 $5, $2, $1)
+- Exchange values between two variables
+
+
 2. Answers
 
 ```c
@@ -16,9 +19,9 @@ void main(){
     width = 7;
     float height;
     height = 3;
-    float area
+    float area;
     area = width * height;
-    printf("the area is %.2f", area); printf("\n")
+    printf("the area is %.2f\n", area); printf("\n")
 
     system("pause");
 }
@@ -36,7 +39,7 @@ void main(){
     score2 = 43;
     score3 = 71;
     avg = (score1 + score2+ score3)/3;
-    printf("Average score : %d);
+    printf("Average score : %d\n", avg);
 
     system("pause");
 }
@@ -60,8 +63,27 @@ void main(){
     b2 = (1868%5)/2;
     b1 = (1868%5)/1;
 
-    printf("$100 : %d, $50 : %d, $20 : %d, $10 : %d, $5 : %d, $2 : %d, $1 : %d", b100, b50, b20, b10, b5, b2, b1);
+    printf("$100 : %d, $50 : %d, $20 : %d, $10 : %d, $5 : %d, $2 : %d, $1 : %d\n", b100, b50, b20, b10, b5, b2, b1);
 
     system("pause");
 }
-```"
+```
+
+- 
+
+```c
+#include <Windows.h>
+#include <stdio.h>
+
+void main(){
+    int x = 10;
+    int y = 20;
+    int z;
+
+    z = x;
+    x = y;
+    y = z;
+    printf("x : %d, y : %d\n", x, y);
+    system("pause");
+}
+```
