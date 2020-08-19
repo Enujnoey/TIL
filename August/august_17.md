@@ -1,67 +1,54 @@
-# Loop Statement 7
+# Loop Statement 6
 
 1. Exercises 
-- Make ATM Features
-    - Sign in - store id in log
-    - Log out - log - -1;
-    - Check balance - only for people who logged in
+- Baskin Robbins game
+    - Take 1 numbers between 1 to 3 from each player
+    - if the sum of every suggested numbers is more than 31, the game ends
+    - if the end turn is player 1's turn, player 2 win, and vice versa.
 
 2. Answers
 
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
+#include <Windows.h>
+#include <time.h>
+
 void main(){
-	// ATM 
-	// 1. Log in ==>  Store ID
-	// 2. Log out ==> log = -1;
-	// 3. Check balance ==> you should log in first 
-	int db_id1 = 1111; int db_id2 = 2222;
-	int db_m1 = 1000; int db_m2 = 2000; 
-	int log = -1;
+	srand(time(0));
+	int num1; int num2; int br;
 	int run = 1;
+	int turn = 0;
+	br = 0; //if you don't write this code, you will occur "runtime error"
 	while(run == 1){
-		if(log == -1){
-			printf("Please Log in first "); printf("\n");
+		if(turn==0){
+			printf("[Player1] Type a number from 1 to 3: ");
+			scanf_s("%d", &num1);
+			br = br + num1;
+			turn = 1;
 		}
-		else{
-			printf("[%d] Log in processing... ", log); printf("\n"); 
+
+		else if(turn==1){
+			printf("[Player2] Type a number from 1 to 3: ");
+			scanf_s("%d", &num2);
+			br = br + num2;
+		turn = 0;
 		}
-		printf("=============== mega atm ==============="); printf("\n");
-		printf("1. Log in 2. Log out 3. Check balance\n");
-		
-		int sel; scanf_s("%d" , &sel);
-		if(sel == 1){
-			printf("Type your ID: ");
-			int tempid;
-			scanf_s("%d", &tempid);
-			if(tempid == db_id1){
-				log = db_id1;
+
+		if(br>=31){
+			if(turn==0){
+				printf("Player 1 Win!\n");
 			}
-			else if(tempid == db_id2){
-				log = db_id2;
+
+			else if(turn==1){
+				printf("Player 2 Win!\n");
 			}
-			else{
-				log = -1;
-			}
-		}
-		else if(sel == 2){
-			log = -1;
-		}
-		else if(sel == 3){
-			if(log != -1){
-				if(log == db_id1){
-					printf("Balance: %d\n", db_m1);
-				}
-				else if(log == db_id2){
-					printf("Balance: %d\n", db_m2);
-				}
-			}
+			
+			run = 0;
 		}
 	}
 
 	system("pause");
 }
-```
+```	
