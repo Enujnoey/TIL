@@ -1,7 +1,7 @@
 # Conditional Statement 2
 
 1. Exercise
-- Hamburger Vending machine
+- Hamburger Bending machine
     - input money first
     - order food
     - print out results  ex) not enough money, charge : £0.50 .. etc
@@ -11,14 +11,13 @@
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int money = 0;
     printf("Insert money: \n");
-    scanf_s("%d", &money);
+    scanf("%d", &money);
 
     printf("===== Lotteria =====\n");
     printf("1. Hamburger £5\n");
@@ -27,22 +26,22 @@ void main(){
 
     int select = 0;
     printf("Press the button \n");
-    scanf_s("%d", &select);
+    scanf("%d", &select);
     if(select == 1){
         if(money<5){
             printf("Not enough money!\n");
         }
         else if(money>=5){
-            printf("Here you are! and your charge is W%d\n", money-5);
+            printf("Here you are! and your charge is £%d\n", money-5);
         }
     }
 
     if(select == 2){ 
-        if(money<7){
+       if(money<7){
             printf("Not enough money!\n");
         }
         else if(money>=7){
-            printf("Here you are! and your charge is W%d\n", money-7);
+            printf("Here you are! and your charge is £%d\n", money-7);
         }
     }
 
@@ -51,10 +50,10 @@ void main(){
             printf("Not enough money!\n");
         }
         else if(money>=13){
-            printf("Here you are! and your charge is W%d\n", money-13);
+            printf("Here you are! and your charge is £%d\n", money-13);
         }
     }
 
-    system("pause");
+    return 0;
 }
-```
+``` 

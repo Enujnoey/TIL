@@ -11,65 +11,63 @@
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
 
-void main(){
+int main(){
     int num1;
-    scanf_s("%d", &num1);
-    printf("Pass : %d", 60 <= a); printf("\n");
-    system("pause");
+    scanf("%d", &num1);
+    printf("Pass: %d", num1 >= 60); printf("\n");
+
+    return 0;
 }
 ```
 
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
 
-void main(){
+int main(){
     int num2;
     printf("Type Seconds: ");
-    scanf_s("%d", &num2);
+    scanf("%d", &num2);
     int min; int sec;
     min = num2 / 60;
     sec = num2 % 60;
     printf("%d Seconds >>> %d min %d sec", num2, min, sec);
-    system("pause");
+
+    return 0;
 }
 ```
 
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
 
-void main(){
-    int num1; int num2;
+int main(){
+    int num1; int nm2;
     printf("Type number 1: ");
-    scanf_s("%d", &num1);
+    scanf("%d", &num1);
     printf("Type number 2: ");
-    scanf_s("%d", &num2);
-    printf("Number 2 is bigger than Number 1: %d\n", num2 > num1);
-
-	system("pause");
+    scanf("%d", &num2);
+    printf("Is Number 2 bigger than Number 1? : %d", num2 > num1);
+    
+    return 0;
 }
 ```
 
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
 
-void main(){
+int main(){
     int num;
     printf("Type number: ");
-    scanf_s("%d", &num);
+    scanf("%d", &num);
     printf("The number is even: %d\n", num%2 == 0);
 
-    system("pause");
+    return 0;
 }
-```
+```u

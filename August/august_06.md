@@ -11,14 +11,13 @@
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
 
-void main(){
+int main(){
     printf("===Welcome to the Rollervcoaster===\n");;
     int height;
     printf("Enter your height: ");
-    scanf_s("%d", height);
+    scanf("%d", &height);
     if(130 <= height){
         printf("Please Enter\n");
     }
@@ -30,6 +29,6 @@ void main(){
     }
     
 
-    system("pause");
+    return 0;
 }
 ```
