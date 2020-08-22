@@ -24,7 +24,7 @@ int main(){
         }
         number += 1;
      }
-     printf("1st prize : %d : %d\n", max_num, max_score);
-     system("read");
- }
+     printf("1st prize: %d Score:  %d\n", max_num, max_score);
+     return 0;
+}
 ```
