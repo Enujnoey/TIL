@@ -8,15 +8,14 @@
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
 
-void main(){
+int main(){
     int count = 0;
     int div = 1;
     int num;
     printf("Type a number: ");
-    scanf_s("%d", &num);
+    scanf("%d", &num);
     while(div <= num){
         if(num % div == 0){
             count++;
@@ -27,9 +26,8 @@ void main(){
         printf("Prime!\n");
     }
     else{
-        /printf("Not prime!\n");
+        printf("Not prime!\n");
     }
-
-    system("pause");
+    return 0;
 }
 ```
