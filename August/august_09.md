@@ -1,8 +1,8 @@
 # Conditional Statement 4
 
 1. Exercises 
-- Make an ATM machine
-- Make 2 options // 1) deposit 2) withdrawal
+- Make ATM machine
+- Make 2 options:  1) deposit 2) withdrawal
 - Print out after the transaction is finished
 
 2. Answers
@@ -10,21 +10,20 @@
 - 
 
 ```c
-#include <Windows.h>
 #include <stdio.h>
 
-void main(){
+int main(){
     int cash = 8000;
     int atm = 5000;
     printf("====ATM===="); printf("\n");
     printf("1. deposit 2.withdrawal"); printf("\n");
     
     int select;
-    scanf_s("%d", &select);
+    scanf("%d", &select);
     if (select==1){
         printf("Type the amount of money: "); printf("\n");
         int deposit;
-        scanf_s("%d", &deposit);
+        scanf("%d", &deposit);
         if (deposit<=cash){
             cash = cash - deposit;
             atm = atm + deposit;
@@ -35,9 +34,9 @@ void main(){
     }
 
     if (select==2){
-        printf("Type the amount of money: "); printf("\n");
+       printf("Type the amount of money: "); printf("\n");
         int withdrawal;
-		    scanf_s("%d", &withdrawal);
+		    scanf("%d", &withdrawal);
 		    if (withdrawal<=atm){
             atm = atm - withdrawal;
             cash = cash + withdrawal;
@@ -46,8 +45,7 @@ void main(){
             printf("Error! Please type again"); printf("\n");
         }
     }
-
-    printf("%d %d", cash, atm);printf("\n");
-    system("pause");
+    printf("cash: %d  Balance: %d", cash, atm);printf("\n");
+    return 0;
 }
-```
+``` 
